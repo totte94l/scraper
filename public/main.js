@@ -7,7 +7,7 @@ var app = new Vue({
     },
     methods: {
         getSubjects() {
-            fetch('http://127.0.0.1:3000/subjects/')
+            fetch('/flba/newsubjects')
             .then(response => response.json())
             .then(json => {
               this.subjects = json;
