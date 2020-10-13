@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <select v-model="limit" v-on:change="getSubjects(this.limit)" name="" id="">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="">Alla</option>
+        </select>
+
+        <div class="container" v-if="!isLoading">
+            <div class="subject_container" v-for="subject in computedObj">
+                <a class="subject_title" v-bind:href="'https://flashback.org' + subject.linksTo">{{subject.title}}</a>
+                <h3 class="subject_category">{{ subject.category }}</h3>
+                <hr />
+                <span class="readers">{{ subject.readers }} läser just nu.</span>
+
+                <span></span>
+            </div>
+        </div>
+        <div v-else>
+            Laddar...
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

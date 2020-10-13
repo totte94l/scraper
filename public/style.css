@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(255, 56, 56);
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.subject_container {
+    display: flex;
+    flex: 1 1 21%; /* explanation below */
+    margin: 15px;
+    height: auto;
+    
+    background: rgb(228,17,56);
+    background: linear-gradient(90deg, rgba(228,17,56,1) 0%, rgba(218,20,102,0.794537798029368) 100%); 
+
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.subject_title{
+    font-size: 18px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    font-weight: 700;
+}
+
+.subject_category {
+    font-size: 12px;
+    color: rgb(208, 208, 208);
+    margin-top: 0px;
+}
+
+.readers {
+    width: 100%;
+    align-self: flex-end;
+    text-align: right;
+    color: rgb(238, 238, 238);
+}
