@@ -4,19 +4,15 @@ var cors = require('cors')
 
 const plScraper = require('./pl-scraper');
 
-
-/* const axios = require('axios');
-const cheerio = require('cheerio') */
-
 var corsOptions = {
     origin: 'http://127.0.0.1',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.static('public'));
 
-app.get('/topsubjects/:amount?', function(req, res) {
+app.get('/flba/topsubjects/:amount?', function(req, res) {
     const getFLBATopSubjects = function() {
 
         const amount = req.params.amount;
@@ -32,7 +28,7 @@ app.get('/topsubjects/:amount?', function(req, res) {
     getFLBATopSubjects();
 })
 
-app.get('/newsubjects/:amount?', function(req, res) {
+app.get('/flba/newsubjects/:amount?', function(req, res) {
     const getFLBANewSubjects = function() {
 
         const amount = req.params.amount;
